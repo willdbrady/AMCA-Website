@@ -61,6 +61,7 @@ nav {
     padding-left: 5px;
     padding-right: 5px;
     z-index: 5;
+    text-align: center;
 }
 
 button {
@@ -262,44 +263,22 @@ button:hover {
 
 /* before pseudo objects para líneas estilizadas */
 
-#section-1 h1:before {
-    content: '';
-    position: absolute;
-    width: 7px;
+.style-lines {
     height: 300px;
-    background-color: var(--primary-color);
-    transform: translate(-630px, 95px) rotate(-40deg);
-    border-radius: 3px;
+    width: 300px;
+    z-index: 1;
+    position: absolute;
+    transform: rotate(5deg);
 }
 
-#section-1:before {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 300px;
-    background-color: var(--primary-color);
-    transform: translate(-880px, 100px) rotate(-40deg);
-    border-radius: 7px;
+.first-lines-right {
+    top: 175vh;
+    right: -4.3vw;
 }
 
-#section-1 p:before {
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 345px;
-    background-color: var(--primary-color);
-    transform: translate(1160px, 205px) rotate(-40deg);
-    border-radius: 7px;
-}
-
-#section-1 p:after {
-    content: '';
-    position: absolute;
-    width: 7px;
-    height: 345px;
-    background-color: var(--primary-color);
-    transform: translate(75px, 145px) rotate(-40deg);
-    border-radius: 3px;
+.first-lines-left {
+    top: 144.1vh;
+    left: -5.0vw;
 }
 
 /* section objectos */
@@ -308,14 +287,13 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
-    height: 80vh;
+    height: 55vh;
 }
 
 #section-1 h1,
 #section-1 p {
     width: 600px;
-    z-index: 0;
+    z-index: 2;
     text-align: left;
 }
 
@@ -327,10 +305,15 @@ button:hover {
 }
 
 #section-1 a {
+    z-index: 2;
     margin-right: 250px;
     margin-top: 45px;
     width: 350px;
     height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
     font-size: 1.5rem;
     background-color: var(--primary-color);
     border-radius: 20px;
@@ -348,28 +331,13 @@ button:hover {
 
 /* before pseudo objects para líneas estilizadas */
 
-#section-2:before {
-    content: '';
-    display: inline-block;
+.section-1-and-2-triangle {
     position: absolute;
-    top: calc(213vh - 245px);
-    z-index: -1;
+    transform: translate(0px, -1px);
+    height: 25vh;
     width: 100vw;
-    height: 245px;
-    background: #000000;
-    clip-path: polygon(0 0, 0% 100%, 100% 100%, 0 0%);
-}
-
-#section-2:after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: calc(213vh - 246px);
-    z-index: 1;
-    width: 100vw;
-    height: 245px;
-    background: #1F1F1F;
-    clip-path: polygon(0 0, 90% 0%, 100% 100%, 0 0%);
+    background-color: #1F1F1F;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
 }
 
 /* Eventos section */
@@ -378,16 +346,16 @@ button:hover {
     z-index: 0;
     position: absolute;
     height: 690px;
-    top: calc(213vh - 245px);
+    top: calc(213vh - 25vh + 1px);
 }
 
 #section-2 {
     background-color: #000000;
-    height: 100vh;
+    height: 125vh;
+    padding-top: 25vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 0px;
 }
 
 #section-2 h1 {
@@ -653,7 +621,113 @@ footer div:nth-child(2) {
 }
 
 /* ----------------------------- */
-@media screen and (max-width:768px) {
+@media screen and (max-width: 1671px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+        height: 126.35vh;
+    }
+
+    .guitar {
+        top: 96.35vh;
+    }
+
+    .hero-section .main .amca-img {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .hero-section .main .carousel {
+        width: 58vw;
+        height: 32.625vw;
+        aspect-ratio: 16 / 9;
+    }
+
+    #section-1 h1 {
+        margin-right: 200px;
+    }
+
+    #section-1 p {
+        margin-left: 300px;
+    }
+
+    #section-1 a {
+
+        margin-right: 450px;
+    }
+
+    .first-lines-right {
+        top: 168.45vh;
+        right: -7.3vw;
+    }
+
+    .first-lines-left {
+        top: 137.55vh;
+        left: -5.0vw;
+    }
+}
+
+@media screen and (max-width: 1433px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 84%);
+    }
+
+    .guitar {
+        top: 100.35vh;
+    }
+
+    #section-1 p {
+        font-size: 1.25rem;
+        width: 900px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 87%);
+    }
+
+    .guitar {
+        top: 105.35vh;
+        left: -260px;
+    }
+}
+
+@media screen and (max-width: 1035px) {
+    .main {
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .hero-section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .hero-section .main .amca-img {
+        height: 38vh;
+        width: 38vh;
+    }
+
+    .hero-section .main .carousel {
+        width: 90vw;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 89%);
+    }
+
+    .guitar {
+        top: 108.35vh;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width:890px) {
     nav {
         flex-direction: column;
         height: 60px;
@@ -701,7 +775,7 @@ footer div:nth-child(2) {
     }
 
     .navbar-resize-active {
-        height: 280px;
+        height: 370px;
         transition: all 0.1s linear;
     }
 
@@ -711,16 +785,53 @@ footer div:nth-child(2) {
     }
 }
 
+@media screen and (max-width:768px) {
+
+    .carousel-button {
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 740px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 92%);
+    }
+
+    .guitar {
+        top: 110.35vh;
+    }
+}
+
+
+
 @media screen and (max-width:540px) {
 
-    .hero-section {
-        height: 75vh;
-        background-image: url(../assets/hero-mask.png);
-        background-position: bottom center;
+    .carousel-button {
+        font-size: 1rem;
     }
 
     .logo-container {
         width: 100px;
     }
 
+}
+
+@media screen and (max-width: 510px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 94.5%);
+    }
+}
+
+@media screen and (max-width: 402px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 95.6%);
+    }
+}
+
+@media screen and (max-width: 333px) {
+    .hero-section {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 96.4%);
+        height: 105vh;
+    }
 }
